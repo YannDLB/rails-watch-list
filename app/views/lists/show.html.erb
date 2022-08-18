@@ -1,0 +1,20 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://fr.web.img4.acsta.net/newsv7/17/11/30/10/45/2591911.jpg">
+      <div class="container text-center">
+        <h1><%= @list.name %></h1>
+      </div>
+    </div>
+<div class="container">
+  <%= link_to "add a movie", new_list_bookmark_path(@list) %>
+  <ul class="list-group-horizontal">
+    <% @bookmarks.each do |bm| %>
+    <li class="list-group-item"><div class="card-trip">
+      <img src="<%=bm.movie.poster_url%>" />
+      <h3><%= bm.movie.title %></h3>
+      <p><em><%= bm.comment %></em></p>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+
+  <%= link_to "Back to lists", lists_path, class="btn btn-secondary" %>
+</div>

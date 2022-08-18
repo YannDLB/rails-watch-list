@@ -1,0 +1,19 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://fr.web.img4.acsta.net/newsv7/17/11/30/10/45/2591911.jpg">
+  <div class="container text-center">
+    <h1>Movie lists</h1>
+  </div>
+</div>
+
+<div class="container">
+  <ul class="list-group">
+    <% @lists.each do |list| %>
+      <div class="list-group-item link-dark">
+        <li class="card-trip">
+          <img src="https://i.pinimg.com/originals/85/b8/93/85b893dfa8a45124e80ae3104671be90.jpg" />
+          <%= link_to list.name, list_path(list) %>
+        </li>
+      </div>
+    <% end %>
+  </ul>
+  <%= link_to "New List", new_list_path %>
+</div>
