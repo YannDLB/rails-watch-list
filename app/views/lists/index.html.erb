@@ -5,6 +5,7 @@
 </div>
 
 <div class="container">
+  <%= link_to "New List", new_list_path, class:"btn btn-secondary" %>
   <ul class="list-group">
     <% @lists.each do |list| %>
       <div class="list-group-item link-dark">
@@ -15,5 +16,4 @@
       </div>
     <% end %>
   </ul>
-  <%= link_to "New List", new_list_path %>
 </div>
