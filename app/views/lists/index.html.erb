@@ -10,7 +10,7 @@
     <% @lists.each do |list| %>
       <div class="list-group-item link-dark">
         <li class="card-trip">
-          <img src="https://i.pinimg.com/originals/85/b8/93/85b893dfa8a45124e80ae3104671be90.jpg" />
+          <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
           <%= link_to list.name, list_path(list) %>
         </li>
       </div>
