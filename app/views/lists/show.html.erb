@@ -5,7 +5,7 @@
     </div>
 <div class="container">
   <%= link_to "add a movie", new_list_bookmark_path(@list), class:"btn btn-secondary" %>
-  <ul class="list-group-horizontal">
+  <ul class="list-group list-group-horizontal">
     <% @bookmarks.each do |bm| %>
     <li class="list-group-item"><div class="card-trip">
       <img src="<%=bm.movie.poster_url%>" />

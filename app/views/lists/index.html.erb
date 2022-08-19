@@ -6,7 +6,8 @@
 
 <div class="container">
   <%= link_to "New List", new_list_path, class:"btn btn-secondary" %>
-  <ul class="list-group">
+  <%= link_to "New Movie", new_movie_path, class:"btn btn-secondary" %>
+  <ul class="list-group list-group-horizontal">
     <% @lists.each do |list| %>
       <div class="list-group-item link-dark">
         <li class="card-trip">
